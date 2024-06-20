@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Usando Vite -->
-    <link rel="stylesheet" href="{{ asset('build/app-bzk8lnhv.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/app-bzk8lnhv.css') }}">
     @vite(['resources/js/app.js'])
 </head>
 
