@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Usando Vite -->
-    <link rel="stylesheet" href="https://prova1-production.up.railway.app/build/assets/app-bzk8lnhv.css">
-    <script src="https://prova1-production.up.railway.app/build/assets/app-ACrzP0gH.js"></script>
+    <link rel="stylesheet" href="https://prova1-production.up.railway.app/build/assets/app-hp7yFsl9.css">
+    <script src="https://prova1-production.up.railway.app/build/assets/app-db3LA4s9js"></script>
     @vite(['resources/js/app.js'])
 </head>
 
