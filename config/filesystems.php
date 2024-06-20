@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'asset_url' => env('https://prova1-production.up.railway.app/'),
 
     /*
     |--------------------------------------------------------------------------
