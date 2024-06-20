@@ -26,9 +26,9 @@ p{
 
 @keyframes animazionebottone {
     0%{transform: rotate(0deg);}
-    20%{transform: rotate(10deg); box-shadow: 3px 3px 3px 3px black;}
-    40%{transform: rotate(0deg); box-shadow: 3px 3px 3px 1px black}
-    60%{transform: rotate(-10deg);box-shadow: 3px 3px 3px 3px black;}
+    20%{transform: rotate(10deg); box-shadow: 3px 3px 3px 3px #0050A5;}
+    40%{transform: rotate(0deg); box-shadow: 3px 3px 3px 1px #82C3D5}
+    60%{transform: rotate(-10deg);box-shadow: 3px 3px 3px 3px #0050A5 ;}
     100%{transform: rotate(0deg);}
 }
 
