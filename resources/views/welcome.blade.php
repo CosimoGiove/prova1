@@ -58,7 +58,7 @@
                                     <a href="{{ route('orders.create', $seat) }}">
                                         <span class="coloreordine">
                                             <i class="fa-solid fa-tablet"></i>
-                                            ordina ora
+                                            ordina
                                         </span>
                                     </a>
                                 </div>
