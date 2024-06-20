@@ -1,13 +1,17 @@
 @extends('layouts.app')
 @section('content')
-<h1>I miei ordini:</h1>
+<div class="contenitoreordine text-center">
+    @foreach($orders as $orderr)
+<h1>ordine del tavolo : {{$orderr->seat->name}} - numero:{{$orderr->seat->numero_tavolo}}</h1>
+@endforeach
+<div>
 <table>
     <thead>
         <tr>
             <th>ID</th>
-            <th>Seat</th>
+            <th>Tavolo</th>
             {{-- <th>Date</th> --}}
-            <th>Actions</th>
+            <th>descrizione</th>
         </tr>
     </thead>
     <tbody>
@@ -35,9 +39,10 @@
         @endforeach
     </tbody>
 </table>
+</div>
 <a href="{{route("welcome")}}">indeitro</a>
 
-
+</div>
 @endsection
 {{-- <!DOCTYPE html>
 <html lang="en">
