@@ -20,7 +20,18 @@ p{
     padding: 10px;
     border-radius: 20px;
     background-color: #82C3D5;
+    animation:animazionebottone 5s infinite;
+
 }
+
+@keyframes animazionebottone {
+    0%{transform: rotate(0deg);}
+    20%{transform: rotate(10deg); box-shadow: 3px 3px 3px 3px black;}
+    40%{transform: rotate(0deg); box-shadow: 3px 3px 3px 1px black}
+    60%{transform: rotate(-10deg);box-shadow: 3px 3px 3px 3px black;}
+    100%{transform: rotate(0deg);}
+}
+
 
 
 .coloreordine{
