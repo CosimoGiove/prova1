@@ -15,9 +15,11 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+                        <a href="{{ route('seats.index') }}">Crea nuovo tavolo</a>
                     </div>
                 </div>
             </div>
         </div>
+        <a href="{{route("orders.by_table")}}">vai</a>
     </div>
 @endsection
