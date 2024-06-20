@@ -47,7 +47,7 @@
                 </a>
             </div>
 
-            <h2>Tavoli:</h2>
+            <h2 class="tavolidue">Tavoli:</h2>
             <ul>
                 @foreach ($seats as $seat)
                     <li class="tavoli">
