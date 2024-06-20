@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<div class="contenitoreordine">
+
 <h1>Crea un nuovo ordine per {{ $seat->name }} - tavolo {{$seat->numero_tavolo}}</h1>
 
     <a href="{{route("welcome")}}"><span class="mostraordini">torna indietro</span></a>
@@ -10,28 +12,30 @@
     @csrf
 
     <label for="nome">Nome/ tutto l'ordine:</label>
-    <input type="text" id="nome" name="nome" required value="{{ old('nome') }}">
+    <input class="formordine" type="text" id="nome" name="nome" required value="{{ old('nome') }}">
 
-    <label for="quantita">quantità/dettagli ordine:</label>
-    <textarea id="quantita" name="quantita" required>{{ old('quantita') }}</textarea>
+    <label for="quantita">Quantità/dettagli ordine:</label>
+    <input class="formordine" type="text" id="quantita" name="quantita" required>{{ old('quantita') }}>
 
-    <button type="submit">Crea ordine</button>
+    <button class="bottoneordinee" type="submit">Crea ordine</button>
     <a href="{{ route('orders.index', $seat->id) }}" class="btn btn-primary">Mostra ordini</a>
 
 </form>
-<h2>ordini di  {{ $seat->name }}</h2>
+<h2>Ordini di  {{ $seat->name }}</h2>
 <ul>
     @foreach ($orders as $order)
-        <li>{{ $order->nome }} - quantità: {{ $order->quantita }}</li>
-        <a href="{{ route('orders.edit', [$seat, $order]) }}">modifica</a>
+        <li class="nomeordinee">{{ $order->nome }} - Quantità: {{ $order->quantita }}</li>
+
+        <a class="modifica" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a>
         {{-- <a href="{{ route('seats.showOrders', $seat->id) }}" class="btn btn-primary">Show Orders</a> --}}
         <form action="{{ route('orders.destroy', ['seat' => $seat->id, 'order' => $order->id]) }}" method="post">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn btn-danger">Cancella</button>
+            <button type="submit" class="btn btn-danger spazio">Cancella</button>
         </form>
     @endforeach
 </ul>
+</div>
 @endsection
 {{-- <!DOCTYPE html>
 <html lang="en">
