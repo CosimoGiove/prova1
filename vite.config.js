@@ -3,6 +3,18 @@ import laravel from 'laravel-vite-plugin';
 import path from 'path';
 
 export default defineConfig({
+  build: {
+    assets: {
+      scheme: 'https', // Corrected here
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~bootstrap/scss/bootstrap";',
+        },
+      },
+    },
+  },
   plugins: [
     laravel({
       input: [
@@ -16,15 +28,6 @@ export default defineConfig({
     alias: {
       '~resources': '/resources/',
       '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-    },
-  },
-  build: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "~bootstrap/scss/bootstrap";',
-        },
-      },
     },
   },
 });
