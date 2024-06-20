@@ -3,9 +3,6 @@ import laravel from 'laravel-vite-plugin';
 import path from 'path';
 
 export default defineConfig({
-  server: {
-    https: true, // <--- Add this line
-  },
   plugins: [
     laravel({
       input: [
@@ -22,7 +19,6 @@ export default defineConfig({
     },
   },
   build: {
-    https: true,
     css: {
       preprocessorOptions: {
         scss: {
