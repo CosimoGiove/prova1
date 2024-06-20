@@ -21,7 +21,7 @@
     <a href="{{ route('orders.index', $seat->id) }}" class="btn btn-primary">Mostra ordini</a>
 
 </form>
-<h2>Ordini di  {{ $seat->name }}</h2>
+<h2 class="tavolidue">Ordini di  {{ $seat->name }}</h2>
 <ul>
     @foreach ($orders as $order)
         <li class="nomeordinee">{{ $order->nome }} - Quantità: {{ $order->quantita }}</li>

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <div class="contenitoreordine text-center">
-    @foreach($orders as $orderr)
-<h1>ordine del tavolo : {{$orderr->seat->name}} - numero:{{$orderr->seat->numero_tavolo}}</h1>
-@endforeach
+   
+<h1>ordine del tavolo:</h1>
+
 <div>
 <table>
     <thead>
