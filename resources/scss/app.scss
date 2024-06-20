@@ -73,6 +73,7 @@ margin-left: 10px;
     background-color: #82C3D5;
     padding-bottom: 20px;
     height: 100vh;
+    overflow-y: scroll;
 }
 ul{
     list-style: none;
@@ -90,5 +91,8 @@ ul{
 
 .tabellacentrale{
     text-align: center;
+}
+.bottoneinvio{
+    margin-top: 30px;
 }
 

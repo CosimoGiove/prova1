@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<div class="contenitoreordine">
 <h1>Crea un  nuovo tavolo</h1>
 <form method="post" action="{{ route('seats.store') }}">
     @csrf
@@ -13,10 +14,11 @@
             <input type="text" id="numero_tavolo" name="numero_tavolo">
            </div>
     </div>
-    <div class="btn btn-primary">
+    <div class="btn btn-primary bottoneinvio">
         <button type="submit">Crea tavolo</button>
     </div>
    
 </form>
+</div>
 
 @endsection
