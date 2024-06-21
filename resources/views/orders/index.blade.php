@@ -1,48 +1,56 @@
 @extends('layouts.app')
 @section('content')
-<div class="contenitoreordine text-center">
-   
-<h1>ordine del tavolo:</h1>
+    <div class="contenitoreordine text-center">
 
-<div>
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Tavolo</th>
-            {{-- <th>Date</th> --}}
-            <th>descrizione</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($orders as $order)
-            <tr>
-                <td>{{ $order->id }}</td>
-                <td>
-                    <span class="nomeordinee">
-                        {{ optional($order->seat)->name }}</td>
-                    </span>
-                   
-                {{-- <td>{{ $order->created_at->format('Y-m-d H:i:s') }}</td> --}}
-                <td>
-                    <span class="nomeordinee">
-                        {{ $order->nome }}</td>
-                    </span>
-                   
-                <td>
-                    <span class="nomeordinee"> {{ $order->quantita }}</span>
-                   
-                </td>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
-</div>
-<a href="{{route("welcome")}}">indeitro</a>
+        <h1>ordine del tavolo:</h1>
+        <input type="checkbox" id="myCheckbox" />
+<label for="myCheckbox">Click me!</label>
 
-</div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tavolo</th>
+                        {{-- <th>Date</th> --}}
+                        <th>descrizione</th>
+                        <th>tipologia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($orders as $order)
+                        <tr>
+                            <td>
+                                <span class="nomeordinee">
+                                    {{ optional($order->seat)->numero_tavolo }}
+                                </span>
+                            </td>
+
+
+                            {{-- <td>{{ $order->created_at->format('Y-m-d H:i:s') }}</td> --}}
+                            <td class="bordonomeordine">
+                                <span class="nomeordinee">
+                                    {{ $order->nome }}
+
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="nomeordinee @if(strcasecmp($order->quantita, 'cucina') == 0) text-red @elseif(strcasecmp($order->quantita, 'pizzeria') == 0) text-green @endif"> 
+                                    {{ $order->quantita }}
+                                </span>
+
+                            </td>
+                            </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        <a href="{{ route('welcome') }}">indeitro</a>
+
+    </div>
 @endsection
 {{-- <!DOCTYPE html>
 <html lang="en">

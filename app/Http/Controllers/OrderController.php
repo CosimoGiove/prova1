@@ -50,7 +50,8 @@ public function store(Request $request, Seat $seat)
 }
 public function edit(Seat $seat,Order $order)
 {
-    return view('orders.edit', compact('order'));
+    $seats = Seat::all();
+    return view('orders.edit', compact('order',"seats"));
 }
 public function update(Request $request, Order $order)
 {

@@ -45,6 +45,7 @@ p{
 }
 .tavolidue{
     margin-top: 30px;
+    text-align: center;
 }
 
 .formordine{
@@ -66,8 +67,18 @@ margin-left: 10px;
     text-align: center;
 }
 
-.nomeordinee{
-    margin: 10px;
+.bordonomeordine{
+    border: 2px solid black;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+}
+.text-red {
+    color: red;
+}
+.text-green {
+    color: green;
 }
 .contenitoreordine{
     background-color: #82C3D5;
@@ -94,5 +105,20 @@ ul{
 }
 .bottoneinvio{
     margin-top: 30px;
+}
+.modificaordine{
+    flex-wrap: wrap;
+}
+.ordinenome{
+    margin-bottom: 20px;
+}
+.ordinenome1{
+    margin-left: 18px;
+}
+.tiplogiaordine{
+    margin-bottom: 20px;
+}
+.salvacamb{
+    margin-right: 20px;
 }
 

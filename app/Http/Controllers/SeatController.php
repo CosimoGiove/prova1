@@ -17,7 +17,8 @@ class SeatController extends Controller
 
     public function create()
     {
-        return view('seats.create');
+        $seats= Seat::all();
+        return view('seats.create',compact("seats"));
     }
 
     public function store(Request $request)

@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for="numero_tavolo">numero del tavolo:</label>
-            <input type="text" id="numero_tavolo" name="numero_tavolo">
+            <input type="number" id="numero_tavolo" name="numero_tavolo">
            </div>
     </div>
     <div class="btn btn-primary bottoneinvio">

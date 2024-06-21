@@ -2,7 +2,7 @@
 @section('content')
 <div class="contenitoreordine">
 
-<h1>Crea un nuovo ordine per {{ $seat->name }} - tavolo {{$seat->numero_tavolo}}</h1>
+<h1 class="tavolidue">Crea un nuovo ordine per {{ $seat->name }} - tavolo {{$seat->numero_tavolo}}</h1>
 
     <a href="{{route("welcome")}}"><span class="mostraordini">torna indietro</span></a>
 
@@ -14,25 +14,27 @@
     <label for="nome">Nome/ tutto l'ordine:</label>
     <input class="formordine" type="text" id="nome" name="nome" required value="{{ old('nome') }}">
 
-    <label for="quantita">Quantità/dettagli ordine:</label>
-    <input class="formordine" type="text" id="quantita" name="quantita" required>{{ old('quantita') }}>
+    <label for="quantita">Tipo(Cucina, Pizzeria):</label>
+    <input class="formordine" type="text" id="quantita" name="quantita" required value="{{ old('quantita') }}">
 
-    <button class="bottoneordinee" type="submit">Crea ordine</button>
+    <button class="bottoneordinee btn btn-success" type="submit">Crea ordine</button>
     <a href="{{ route('orders.index', $seat->id) }}" class="btn btn-primary">Mostra ordini</a>
 
 </form>
 <h2 class="tavolidue">Ordini di  {{ $seat->name }}</h2>
 <ul>
     @foreach ($orders as $order)
-        <li class="nomeordinee">{{ $order->nome }} - Quantità: {{ $order->quantita }}</li>
+    <div class="tavoli">
+        <li class="nomeordinee">{{ $order->nome }} - tipologia: {{ $order->quantita }}</li>
 
-        <a class="modifica" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a>
+        <a class="modifica btn btn-secondary" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a>
         {{-- <a href="{{ route('seats.showOrders', $seat->id) }}" class="btn btn-primary">Show Orders</a> --}}
         <form action="{{ route('orders.destroy', ['seat' => $seat->id, 'order' => $order->id]) }}" method="post">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger spazio">Cancella</button>
         </form>
+        </div>
     @endforeach
 </ul>
 </div>
