@@ -7,7 +7,7 @@
     <a href="{{route("welcome")}}"><span class="mostraordini">torna indietro</span></a>
 
 
-
+<div class="text-center">
 <form method="post" action="{{ route('orders.store', $seat->id) }}">
     @csrf
 
@@ -21,19 +21,35 @@
     <a href="{{ route('orders.index', $seat->id) }}" class="btn btn-primary">Mostra ordini</a>
 
 </form>
+</div>
 <h2 class="tavolidue">Ordini di  {{ $seat->name }}</h2>
 <ul>
     @foreach ($orders as $order)
     <div class="tavoli">
         <li class="nomeordinee">{{ $order->nome }} - tipologia: {{ $order->quantita }}</li>
+        <div class="d-flex mt-3 mb-3">
+            <div>
+                <a class="modifica btn btn-secondary" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a>
+            </div>
+            <div class="mx-3">
+                <form action="{{ route('orders.destroy', ['seat' => $seat->id, 'order' => $order->id]) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger spazio">Cancella</button>
+                </form>
+            </div>
+        </div>
 
-        <a class="modifica btn btn-secondary" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a>
+        {{-- <a class="modifica btn btn-secondary" href="{{ route('orders.edit', [$seat, $order]) }}"><b>Modifica</b></a> --}}
         {{-- <a href="{{ route('seats.showOrders', $seat->id) }}" class="btn btn-primary">Show Orders</a> --}}
-        <form action="{{ route('orders.destroy', ['seat' => $seat->id, 'order' => $order->id]) }}" method="post">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger spazio">Cancella</button>
-        </form>
+        
+            {{-- <form action="{{ route('orders.destroy', ['seat' => $seat->id, 'order' => $order->id]) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger spazio">Cancella</button>
+            </form> --}}
+       
+      
         </div>
     @endforeach
 </ul>
