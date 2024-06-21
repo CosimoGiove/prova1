@@ -3,9 +3,6 @@
     <div class="contenitoreordine text-center">
 
         <h1>ordine del tavolo:</h1>
-        <input type="checkbox" id="myCheckbox" />
-<label for="myCheckbox">Click me!</label>
-
         <div>
             <table>
                 <thead>
