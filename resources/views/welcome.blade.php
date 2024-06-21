@@ -30,7 +30,7 @@
         </div>
     </div> --}}
     <div class="content contenitoreordine">
-        <div class="text-center bordoimmagine">
+        <div class="text-center bordoimmagine mt-2 mb-2">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VK4tX_VGts66_mnK630LVu3-nHNwCpzhkQ&s"
                 alt="">
         </div>
