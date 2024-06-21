@@ -44,7 +44,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="navbar-nav">
+            {{-- <div class="navbar-nav">
                 <div class="nav-item text-nowrap ms-2">
                     <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -55,7 +55,7 @@
                         @csrf
                     </form>
                 </div>
-            </div>
+            </div> --}}
         </header>
 
         <div class="vh-100">
@@ -71,6 +71,20 @@
                                     href="{{ route('dashboard') }}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                                 </a>
+                            </li>
+                            <li>
+                                <div class="navbar-nav">
+                                    <div class="nav-item text-nowrap ms-2">
+                                        <a class="nav-link" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
 
