@@ -8,17 +8,22 @@
 <h1 class="creatavolo text-center">Crea un  nuovo tavolo</h1>
 <form method="post" action="{{ route('seats.store') }}">
     @csrf
-    <div class="d-flex creazionetavolo">
+    <div class="creazionetavolo text-center">
         <div>
             <label for="name">Nome del tavolo:</label>
-            <input type="text" id="name" name="name">
+            <div>
+                <input type="text" id="name" name="name">
+            </div>
+           
         </div>
         <div>
             <label for="numero_tavolo">numero del tavolo:</label>
-            <input type="number" id="numero_tavolo" name="numero_tavolo">
+            <div>
+                <input type="number" id="numero_tavolo" name="numero_tavolo">
+            </div>
            </div>
     </div>
-    <div class="bottoneinvio">
+    <div class="bottoneinvio text-center">
         <button class="btn btn-success" type="submit">Crea tavolo</button>
     </div>
    
