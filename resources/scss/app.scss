@@ -10,7 +10,13 @@ p{
     padding-bottom: 10px;
     padding-left: 5px;
     box-shadow: 1px 1px 2px 2px #0050A5 ;
+    animation: ciao 0.8s linear;
 }
+@keyframes ciao {
+    0%{
+      margin-left: 300px;
+    } 
+  }
 .creatavolo{
     color: #0050A5;
 }
