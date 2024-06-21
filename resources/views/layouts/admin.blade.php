@@ -32,7 +32,12 @@
 
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
             <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">
+                    <span class="immaginedashboard">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VK4tX_VGts66_mnK630LVu3-nHNwCpzhkQ&s" alt="">
+                    </span>
+                    Lido Brin    
+                </a>
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +58,7 @@
             </div>
         </header>
 
-        <div class="container-fluid vh-100">
+        <div class="vh-100">
             <div class="row h-100">
                 <!-- Definire solo parte del menu di navigazione inizialmente per poi
         aggiungere i link necessari giorno per giorno
