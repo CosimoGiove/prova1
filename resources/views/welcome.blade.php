@@ -29,8 +29,8 @@
                 rerum officiis accusamus dolores!</p>
         </div>
     </div> --}}
-    <div class="content">
-        <div class="text-center">
+    <div class="content contenitoreordine">
+        <div class="text-center bordoimmagine">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VK4tX_VGts66_mnK630LVu3-nHNwCpzhkQ&s"
                 alt="">
         </div>

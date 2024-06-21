@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <div class="contenitoreordine">
-<h1>Crea un  nuovo tavolo</h1>
+    <div class="text-center bordoimmagine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VK4tX_VGts66_mnK630LVu3-nHNwCpzhkQ&s"
+            alt="">
+    </div>
+<h1 class="creatavolo text-center">Crea un  nuovo tavolo</h1>
 <form method="post" action="{{ route('seats.store') }}">
     @csrf
     <div class="d-flex creazionetavolo">
@@ -14,8 +18,8 @@
             <input type="number" id="numero_tavolo" name="numero_tavolo">
            </div>
     </div>
-    <div class="btn btn-primary bottoneinvio">
-        <button type="submit">Crea tavolo</button>
+    <div class="bottoneinvio">
+        <button class="btn btn-success" type="submit">Crea tavolo</button>
     </div>
    
 </form>
